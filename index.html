@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noctilivre</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== ACCUEIL ===== -->
+<section id="home" class="page active">
+  <h1>🌌 Bienvenue</h1>
+  <button onclick="goNoctilivre()">📚 Noctilivre</button>
+  <button onclick="goPokeNote()">📝 PokeNote</button>
+</section>
+
+<!-- ===== NOCTILIVRE ===== -->
+<section id="noctilivre" class="page nocti-bg">
+
+<img src="noctalie.png" class="poke poke-left">
+<img src="nymphalie.png" class="poke poke-right">
+
+<div class="container">
+<h2>Noctilivre 🌙</h2>
+
+<button onclick="showForm()">📖 Ajouter un avis</button>
+<button onclick="showLibrary()">🌌 Voir mes avis</button>
+<button onclick="goHome()">Accueil</button>
+
+<div id="formSection" style="display:none;">
+<form id="book-form">
+
+<input type="text" id="bookName" placeholder="Nom du livre" required>
+<input type="text" id="author" placeholder="Auteur">
+<input type="text" id="genre" placeholder="Genre">
+
+<select id="rating">
+<option value="1">⭐</option>
+<option value="2">⭐⭐</option>
+<option value="3">⭐⭐⭐</option>
+<option value="4">⭐⭐⭐⭐</option>
+<option value="5">⭐⭐⭐⭐⭐</option>
+</select>
+
+<input type="number" id="pages" placeholder="Nombre de pages">
+
+<select id="explicit">
+<option value="Non">Pas de scènes choquantes</option>
+<option value="Oui">Scènes choquantes</option>
+</select>
+
+<textarea id="review" placeholder="Ton avis..."></textarea>
+
+<button type="submit">✨ Enregistrer</button>
+
+</form>
+</div>
+
+<div id="librarySection" style="display:none;">
+<div id="library"></div>
+</div>
+
+</div>
+</section>
+
+<!-- ===== POKENOTE ===== -->
+<section id="pokenote" class="page note-bg">
+
+<img src="psystigri.png" class="poke poke-note-left">
+<img src="goupix.png" class="poke poke-note-right">
+
+<h2>📝 PokeNote</h2>
+<button onclick="goHome()">Accueil</button>
+
+<div id="notesContainer"></div>
+
+<button id="addNoteBtn">+</button>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
